@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Shopping</title>
+        <meta name="viewport"content="width=device-width, intial-scale=1.0">
+    </head>
+    <link rel="stylesheet" href="{% static 'Payment.css'%}">
+    <body>
+        <div class="container">
+            <form action="POST">
+                <div class="row">
+                    <div class ="col">
+                        <h3 class="title">billing address</h3>
+                        <div class="inputbox">
+                            <span>full name :</span>
+                            <input type="text" placeholder="Name" name=FName requer>
+                        </div>
+                        <div class="inputbox">
+                            <span>email :</span>
+                            <input type="email" placeholder="example@example.com" name=Email requer>
+                        </div>
+                        <div class="inputbox">
+                            <span>span :</span>
+                            <input type="text" placeholder="location-street" name=LocationStreet requer>
+                        </div>
+                        <div class="inputbox">
+                            <span>city :</span>
+                            <input type="text" placeholder="october" name=City requer> 
+                        </div>
+                        <div class="flex">
+                            <div class="inputbox">
+                            <span>state :</span>
+                            <input type="text" placeholder="giza" name=State requer>
+                        </div>
+                        <div class="inputbox">
+                            <span>zib code :</span>
+                            <input type="text" placeholder="123 456" name=ZibCode requer>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class ="col">
+
+                        <h3 class="title">payment</h3>
+
+                        <div class="inputbox">
+                            <span>card accepted :</span>
+                            <img src="/static/img/Credit-Card-Icons.jpg"alt="">
+                        </div>
+    
+                        <div class="inputbox">
+                            <span>name on card :</span>
+                            <input type="text" placeholder="Card" name=CardName requer>
+    
+                        </div>
+
+                        <div class="inputbox">
+                            <span>credit card number :</span>
+                            <input type="number"placeholder="1111-2222-3333-4444" name=CreditCardNumber requer>
+                        </div>
+                        <div class="inputbox">
+                            <span>exp month :</span>
+                            <input type="number"placeholder="month" name=ExpMonth requer>
+                        </div> 
+                   
+                        <div class="flex">
+                            <div class="inputbox">
+                                <span>exp year :</span>
+                                <input type="number" placeholder="year" name=ExpYear requer>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="proceed to checkout" class="submit-btn">
+            </form>
+        </div>
+    </body>    
+</html>
