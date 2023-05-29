@@ -40,6 +40,6 @@ class OrderItem(models.Model):
 class CartItem(models.Model):
     customer = models.ForeignKey(CustomerModel, on_delete=models.CASCADE,null=True)
     product = models.ForeignKey(Product, on_delete=models.CASCADE,null=True)
-
+    quantity = models.IntegerField(default=1)
     def __str__(self):
         return f"{self.customer} - {self.product}"

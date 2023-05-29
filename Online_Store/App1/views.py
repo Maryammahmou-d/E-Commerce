@@ -82,3 +82,18 @@ def user_cart(request):
             'cart_items': cart_items
         }
         return render(request, 'App1/Cart.html', context)
+    
+    
+def update_quantity(request, item_id):
+    cart_item = get_object_or_404(CartItem, id=item_id)
+
+    if request.method == 'POST':
+        action = request.POST.get('action')
+        quantity = request.POST.get('quantity')
+        if action == 'decrease':
+            cart_item.quantity -= 1
+        elif action == 'increase':
+            cart_item.quantity += 1
+        cart_item.save()
+
+    return redirect('Cart')
